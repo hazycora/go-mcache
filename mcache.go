@@ -58,6 +58,19 @@ func (mc *CacheDriver) Get(key string) (interface{}, bool) {
 	return entity.DataLink, true
 }
 
+//Expires - returns time difference until the cache expires
+func (mc *CacheDriver) Expires(key string) (time.Duration, bool) {
+	data, ok := mc.storage.Find(key)
+	if !ok {
+		return time.Minute, false
+}
+	entity := data.(item.Item)
+	if entity.IsExpire() {
+		return time.Minute, false
+	}
+	return entity.Expire.Local().Sub(time.Now()), true
+}
+
 //Set - add cache data value
 func (mc *CacheDriver) Set(key string, value interface{}, ttl time.Duration) error {
 	expire := time.Now().Local().Add(ttl)
