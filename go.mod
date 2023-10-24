@@ -1,3 +1,3 @@
-module github.com/OrlovEvgeny/go-mcache
+module github.com/hazycora/go-mcache
 
 go 1.12

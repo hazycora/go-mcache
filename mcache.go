@@ -2,9 +2,9 @@ package mcache
 
 import (
 	"context"
-	"github.com/OrlovEvgeny/go-mcache/gcmap"
-	"github.com/OrlovEvgeny/go-mcache/item"
-	"github.com/OrlovEvgeny/go-mcache/safeMap"
+	"github.com/hazycora/go-mcache/gcmap"
+	"github.com/hazycora/go-mcache/item"
+	"github.com/hazycora/go-mcache/safeMap"
 	"time"
 )
 

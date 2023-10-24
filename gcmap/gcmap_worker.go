@@ -2,7 +2,7 @@ package gcmap
 
 import (
 	"context"
-	"github.com/OrlovEvgeny/go-mcache/safeMap"
+	"github.com/hazycora/go-mcache/safeMap"
 	"sync"
 	"time"
 )
